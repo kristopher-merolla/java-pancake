@@ -19,6 +19,7 @@ public class FizzBuzz {
         return outputWord;
     }
 
+    // Overload method
     public String fizzBuzz(
       // Params
       int number,
@@ -28,6 +29,18 @@ public class FizzBuzz {
     ) {
 
       String numberCheck = fizzBuzz(number);
-      
+      String outputWord;
+      switch(numberCheck) {
+        case "FizzBuzz": outputWord = multOf15Word;
+          break;
+        case "Fizz": outputWord = multOf3Word;
+          break;
+        case "Buzz": outputWord = multOf5Word;
+          break;
+        default: outputWord = numberCheck;
+          break;
+      }
+
+      return outputWord;
     }
 }
