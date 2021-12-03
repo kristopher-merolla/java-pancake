@@ -1,21 +1,53 @@
 // List of various problems
 
 public class Basics {
-  public static void main(String[] args) {
   /*
   Print 1-255
   Write a method that prints all the numbers from 1 to 255.
   */
+  public void printNumbers(int maxNumber) {
+    if (maxNumber <= 0) {
+      return;
+    }
+
+    for (int i = 1; i < maxNumber+1 ; i++) {
+      System.out.println(i);
+    }
+  } 
 
   /*
   Print odd numbers between 1-255
   Write a method that prints all the odd numbers from 1 to 255.
   */
+  public void printOddNumbers(int maxNumber) {
+    if (maxNumber <= 0) {
+      return;
+    } else {
+      for (int i = 1; i < maxNumber+1; i++) {
+        if (i % 2 == 1) {
+          System.out.println(i);
+        }
+      }
+    }
+  }
 
   /*
   Sigma of 255 AKA Sum to 255
   Write a method that creates and eventually returns a sum variable that adds up all the numbers from 1 to 255. In this method you are not printing the sum, except to debug if you need to, the method should return the sum. Note: You do not need an array to write this function. 
   */
+  public int sigma(int maxNumber) {
+    if (maxNumber <= 0) {
+      return 0;
+    }
+
+    int sigmaValue = 0;
+
+    for (int i = 1; i < maxNumber+1; i++) {
+      sigmaValue += i;
+    }
+
+    return sigmaValue;
+  }
 
   /*
   Iterating through an array
@@ -61,6 +93,4 @@ public class Basics {
   Shifting the Values in the Array
   Given any array x, say [1, 5, 10, 7, -2], write a method that shifts each number by one to the front. For example, when the method is done, an x of [1, 5, 10, 7, -2] should become [5, 10, 7, -2, 0]. Notice that the last number is 0. The method does not need to wrap around the values shifted out of bounds.
   */
-
-  }
 }
