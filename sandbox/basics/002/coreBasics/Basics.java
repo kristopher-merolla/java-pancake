@@ -1,4 +1,4 @@
-// List of various problems
+import java.util.ArrayList;
 
 public class Basics {
   /*
@@ -53,16 +53,50 @@ public class Basics {
   Iterating through an array
   Given an array X, say [1,3,5,7,9,13], write a method that would iterate through each member of the array and print each value on the screen. Being able to loop through each member of the array is extremely important.
   */
+  public void printArrayValues(int [] inputArray) {
+    if (inputArray.length < 1) {
+      return;
+    }
+
+    for (int value : inputArray) {
+      System.out.println(value);
+    }
+  }
 
   /*
   Find Max
   Write a method (sets of instructions) that takes any array and prints the maximum value in the array. Your method should also work with a given array that has all negative numbers (e.g. [-3, -5, -7]), or even a mix of positive numbers, negative numbers and zero.
   */
+  public int findMaxValue(int [] inputArray) {
+    if (inputArray.length < 1) {
+      return 0;
+    }
+
+    int maxValue = inputArray[0];
+    for (int val : inputArray) {
+      if (maxValue < val) {
+        maxValue = val;
+      }
+    }
+
+    return maxValue;
+  }
 
   /*
   Array with Odd Numbers 
   Write a method that creates an array 'y' that contains all the odd numbers between 1 to 255. When the method is done, 'y' should have the value of [1, 3, 5, 7, ... 255].
   */
+  public ArrayList<Integer> oddNumberArray(int [] inputArray) {
+    ArrayList<Integer> oddNumArray = new ArrayList<Integer>();
+
+    for (int val : inputArray) {
+      if (val % 2 == 1) {
+        oddNumArray.add(val);
+      }
+    }
+
+    return oddNumArray;
+  }
 
   /*
   Get Average
