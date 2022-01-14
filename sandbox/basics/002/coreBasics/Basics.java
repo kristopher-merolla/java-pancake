@@ -102,6 +102,20 @@ public class Basics {
   Get Average
   Write a method that takes an array, and prints the AVERAGE of the values in the array. For example for an array [2, 10, 3], your method should print an average of 5. Again, make sure you come up with a simple base case and write instructions to solve that base case first, then test your instructions for other complicated cases.
   */
+  public int getAverage(int [] inputArray) {
+    int averageValue = 0;
+    int sum = 0;
+
+    for (int val : inputArray) {
+      sum += val;
+    }
+
+    if (sum != 0) {
+      averageValue = sum / inputArray.length;
+    }
+
+    return averageValue;
+  }
 
   /*
   Greater Than Y
