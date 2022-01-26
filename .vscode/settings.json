@@ -1,6 +1,7 @@
 {
   "java.project.sourcePaths": [
     "sandbox/basics/002/coreBasics",
-    "sandbox/basics/000"
+    "sandbox/basics/000",
+    "sandbox/basics/003"
   ]
 }
